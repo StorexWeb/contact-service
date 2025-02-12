@@ -1,0 +1,50 @@
+{
+    "name": "vogo-expenses-service",
+    "version": "1.0.0",
+    "description": "Vogo expenses service",
+    "main": "dist/www/index.js",
+    "scripts": {
+      "prebuild": "eslint . --ext .ts",
+      "prestart": "npm run build",
+      "prestart:dev": "npm run build:dev",
+      "build": "tsc",
+      "build:dev": "tsc --declaration",
+      "build:watch": "npm run build:dev -- --watch",
+      "start": "node .",
+      "start:dev": "node .",
+      "start:watch": "npm run build:dev && nodemon --ext ts --delay 2.5 --exec npm run start:dev",
+      "test": "mocha -r ts-node/register src/Test/**/*.spec.ts",
+      "nodemon": "nodemon .\\dist\\www"
+    },
+    "engines": {
+      "node": ">=12.13.0"
+    },
+    "dependencies": {
+      "@storexweb/kernel": "file:../kernel",
+      "@storexweb/vogo-shared": "file:../vogo-shared",
+      "apollo-server-express": "^3.10.1",
+      "mongoose": "^6.5.4",
+      "pug": "^3.0.3"
+    },
+    "devDependencies": {
+      "@types/chai": "^4.3.3",
+      "@types/mocha": "^9.1.1",
+      "@types/pug": "^2.0.10",
+      "@types/sinon": "^10.0.13",
+      "@typescript-eslint/eslint-plugin": "^5.33.1",
+      "@typescript-eslint/parser": "^5.33.1",
+      "chai": "^4.3.7",
+      "concurrently": "^8.2.2",
+      "eslint": "^8.22.0",
+      "lefthook": "^1.6.13",
+      "mocha": "^10.0.0",
+      "nodemon": "^3.1.0",
+      "prettier": "3.2.5",
+      "sinon": "^14.0.0",
+      "ts-node": "^10.9.1",
+      "typescript": "4.8.2"
+    },
+    "author": "youssef shebl",
+    "license": "ISC"
+  }
+  
