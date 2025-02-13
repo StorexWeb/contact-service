@@ -1,7 +1,7 @@
 {
-    "name": "vogo-expenses-service",
+    "name": "vogo-contact-service",
     "version": "1.0.0",
-    "description": "Vogo expenses service",
+    "description": "Vogo contact service",
     "main": "dist/www/index.js",
     "scripts": {
       "prebuild": "eslint . --ext .ts",
